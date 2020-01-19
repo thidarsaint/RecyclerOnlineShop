@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/image_top_show"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/camera"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/brand_view"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_top_show"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/shopping_bag">
+
+                <TextView
+                    android:id="@+id/txt_browseby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="BROWSE BY"
+                    android:textColor="#FAF7F7"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:text="Brand"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    android:background="@drawable/button_color"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_browseby" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="| Latest Arrivals"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/brand_view"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="view all"
+            android:background="@drawable/button_color"
+            android:textAllCaps="false"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/brand_view"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_latest_arrivals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_arrival"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycler_latest_arrivals"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/shopping_bag">
+
+                <TextView
+                    android:id="@+id/txt_browseby_image"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40dp"
+                    android:text="CAN'T FIND WHAT YOU LOOKING FOR SEARCH BY"
+                    android:textColor="#F3F6F7"
+                    android:textStyle="bold"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_search_image"
+                    android:layout_width="120dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="35dp"
+                    android:text="Upload Picture"
+                    android:background="@drawable/button_color"
+                    app:layout_constraintHorizontal_bias="0.99"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_browseby_image" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/choose_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="| Choose By Country"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_image_view"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_search_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/choose_country"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/customer_service_view"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycler_search_country"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/customer_services">
+
+                <TextView
+                    android:id="@+id/txt_help"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40dp"
+                    android:text="NEED HELP"
+                    android:textColor="#000000"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_coustomer_services"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:text="CUSTOMER SERVICE"
+                    android:textColor="#F7F3F3"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_help"
+                    />
+
+                <Button
+                    android:id="@+id/btn_call_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="38dp"
+                    android:text="Upload Picture"
+                    android:background="@drawable/button_color"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_coustomer_services" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_popular_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Popular Products"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/customer_service_view"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_popular_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin = "5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_popular_products"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
