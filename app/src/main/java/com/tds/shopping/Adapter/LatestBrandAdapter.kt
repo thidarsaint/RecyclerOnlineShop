@@ -10,8 +10,7 @@ import com.tds.shopping.R
 import com.tds.shopping.model.LatestBrand
 import kotlinx.android.synthetic.main.latest_arrials.view.*
 
-class LatestBrandViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
-{
+class LatestBrandViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var latestImage = itemView.findViewById<ImageView>(R.id.image_latest)
     var latestBrandName = itemView.findViewById<TextView>(R.id.latest_brand_name)
     var latestBrandType = itemView.findViewById<TextView>(R.id.latest_brand)
@@ -20,9 +19,11 @@ class LatestBrandViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
     var latestOldKs = itemView.findViewById<TextView>(R.id.old_kyat)
 }
 
-class LatestBrandAdapter(var latestBrandList: ArrayList<LatestBrand>): RecyclerView.Adapter<LatestBrandViewHolder>(){
+class LatestBrandAdapter(var latestBrandList: ArrayList<LatestBrand>) :
+    RecyclerView.Adapter<LatestBrandViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LatestBrandViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.latest_arrials, parent, false)
+        var view =
+            LayoutInflater.from(parent.context).inflate(R.layout.latest_arrials, parent, false)
         return LatestBrandViewHolder(view)
     }
 
@@ -35,10 +36,9 @@ class LatestBrandAdapter(var latestBrandList: ArrayList<LatestBrand>): RecyclerV
         holder.latestBrandType.text = latestBrandList[position].latestBrandType
         holder.latestImage.setImageResource(latestBrandList[position].latestBrandImage)
 
-        if(latestBrandList[position].oldPrice > 0)
-        {
+        if (latestBrandList[position].oldPrice > 0) {
             holder.oldPrice.text = latestBrandList[position].oldPrice.toString()
-        }else{
+        } else {
             holder.latestOldKs.text = ""
         }
 

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="320dp"
     android:layout_margin="5dp"
-    app:cardCornerRadius="8dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    app:cardCornerRadius="8dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -17,8 +15,7 @@
             android:layout_width="200dp"
             android:layout_height="230dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/latest_brand"
@@ -27,8 +24,7 @@
             android:layout_marginLeft="5dp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_latest"
-            />
+            app:layout_constraintTop_toBottomOf="@id/image_latest" />
 
         <TextView
             android:id="@+id/latest_brand_name"
@@ -36,8 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/latest_brand"
-            />
+            app:layout_constraintTop_toBottomOf="@id/latest_brand" />
 
         <ImageView
             android:id="@+id/image_rate_stars"
@@ -46,49 +41,45 @@
             android:layout_marginLeft="5dp"
             android:src="@drawable/ic_rate"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/latest_brand_name"
-            />
+            app:layout_constraintTop_toBottomOf="@id/latest_brand_name" />
 
         <TextView
             android:id="@+id/latest_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintRight_toLeftOf="@id/kyat"
-            app:layout_constraintTop_toBottomOf="@id/latest_brand_name"
-            />
+            app:layout_constraintTop_toBottomOf="@id/latest_brand_name" />
+
         <TextView
             android:id="@+id/kyat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="KS"
             android:layout_marginRight="10dp"
+            android:text="KS"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/latest_brand_name"
-            />
+            app:layout_constraintTop_toBottomOf="@id/latest_brand_name" />
 
         <TextView
             android:id="@+id/old_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/strike_line"
             android:layout_marginBottom="8dp"
+            android:background="@drawable/strike_line"
             app:layout_constraintRight_toLeftOf="@id/old_kyat"
-            app:layout_constraintTop_toBottomOf="@id/latest_price"
-            />
+            app:layout_constraintTop_toBottomOf="@id/latest_price" />
+
         <TextView
             android:id="@+id/old_kyat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="KS"
-            android:background="@drawable/strike_line"
             android:layout_marginRight="10dp"
+            android:background="@drawable/strike_line"
+            android:text="KS"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/kyat"
-            />
+            app:layout_constraintTop_toBottomOf="@id/kyat" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </androidx.cardview.widget.CardView>

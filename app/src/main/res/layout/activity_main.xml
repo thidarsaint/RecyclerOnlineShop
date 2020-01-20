@@ -26,8 +26,7 @@
             android:layout_height="130dp"
             android:layout_marginTop="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_top_show"
-            >
+            app:layout_constraintTop_toBottomOf="@id/image_top_show">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -43,19 +42,19 @@
                     android:textColor="#FAF7F7"
                     android:textStyle="bold"
                     app:layout_constraintHorizontal_bias="0.6"
-                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/btn_brand"
                     android:layout_width="wrap_content"
                     android:layout_height="28dp"
+                    android:background="@drawable/button_color"
                     android:text="Brand"
                     app:layout_constraintHorizontal_bias="0.6"
-                    android:background="@drawable/button_color"
-                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/txt_browseby" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -65,26 +64,24 @@
             android:id="@+id/txt_arrival"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
             android:text="| Latest Arrivals"
             android:textSize="20sp"
-            android:gravity="center"
             android:textStyle="bold"
-            android:layout_margin="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/brand_view"
-            />
+            app:layout_constraintTop_toBottomOf="@id/brand_view" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="view all"
-            android:background="@drawable/button_color"
-            android:textAllCaps="false"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
+            android:background="@drawable/button_color"
+            android:text="view all"
+            android:textAllCaps="false"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/brand_view"
-            />
+            app:layout_constraintTop_toBottomOf="@id/brand_view" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_latest_arrivals"
@@ -92,8 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt_arrival"
-            />
+            app:layout_constraintTop_toBottomOf="@id/txt_arrival" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/search_image_view"
@@ -101,8 +97,7 @@
             android:layout_height="160dp"
             android:layout_marginTop="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recycler_latest_arrivals"
-            >
+            app:layout_constraintTop_toBottomOf="@id/recycler_latest_arrivals">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -125,11 +120,11 @@
                     android:layout_width="120dp"
                     android:layout_height="30dp"
                     android:layout_marginRight="35dp"
-                    android:text="Upload Picture"
                     android:background="@drawable/button_color"
+                    android:text="Upload Picture"
                     app:layout_constraintHorizontal_bias="0.99"
-                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/txt_browseby_image" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -139,21 +134,19 @@
             android:id="@+id/choose_country"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="15dp"
             android:text="| Choose By Country"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_margin="15dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/search_image_view"
-            />
+            app:layout_constraintTop_toBottomOf="@id/search_image_view" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_search_country"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/choose_country"
-            />
+            app:layout_constraintTop_toBottomOf="@id/choose_country" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/customer_service_view"
@@ -161,8 +154,7 @@
             android:layout_height="160dp"
             android:layout_marginTop="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recycler_search_country"
-            >
+            app:layout_constraintTop_toBottomOf="@id/recycler_search_country">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -188,16 +180,15 @@
                     android:text="CUSTOMER SERVICE"
                     android:textColor="#F7F3F3"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/txt_help"
-                    />
+                    app:layout_constraintTop_toBottomOf="@id/txt_help" />
 
                 <Button
                     android:id="@+id/btn_call_now"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="38dp"
-                    android:text="Upload Picture"
                     android:background="@drawable/button_color"
+                    android:text="Upload Picture"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/txt_coustomer_services" />
 
@@ -208,22 +199,20 @@
             android:id="@+id/txt_popular_products"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="Popular Products"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_margin="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/customer_service_view"
-            />
+            app:layout_constraintTop_toBottomOf="@id/customer_service_view" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_popular_products"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin = "5dp"
+            android:layout_margin="5dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt_popular_products"
-            />
+            app:layout_constraintTop_toBottomOf="@id/txt_popular_products" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

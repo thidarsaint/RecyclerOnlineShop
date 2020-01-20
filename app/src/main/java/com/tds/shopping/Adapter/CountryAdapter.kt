@@ -11,15 +11,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.tds.shopping.R
 import com.tds.shopping.model.Country
 
-class CountryViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
-{
+class CountryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     var countryName = itemView.findViewById<TextView>(R.id.country_name)
     var countryImage = itemView.findViewById<ImageView>(R.id.country_image)
 }
 
-class CountryAdapter(var countryList: ArrayList<Country>): RecyclerView.Adapter<CountryViewHolder>(){
+class CountryAdapter(var countryList: ArrayList<Country>) :
+    RecyclerView.Adapter<CountryViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.search_country, parent, false)
+        var view =
+            LayoutInflater.from(parent.context).inflate(R.layout.search_country, parent, false)
         return CountryViewHolder(view)
     }
 
