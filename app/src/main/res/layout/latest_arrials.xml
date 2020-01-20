@@ -34,14 +34,16 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/latest_brand" />
 
-        <ImageView
+        <RatingBar
             android:id="@+id/image_rate_stars"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="5dp"
-            android:src="@drawable/ic_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="4"
+            android:layout_marginLeft="8dp"
+            style="@style/Widget.AppCompat.RatingBar.Small"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/latest_brand_name" />
+            app:layout_constraintTop_toBottomOf="@id/latest_brand_name"  />
 
         <TextView
             android:id="@+id/latest_price"
